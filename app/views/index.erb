@@ -1,0 +1,19 @@
+<div class="container">
+
+  <%# TODO
+  1. If user is not signed in - display "Welcome".
+  2. If user is signed in then  display all users %>
+
+  <% if @current_user%>
+    <h1> Welcome <%= @current_user.name %> </h1>
+    <h5> Here are the current users on this page </h5>
+  <% @users.each do |user| %>
+    <li><%= user.name %> </li>
+  <% end %>
+
+  <% else %>
+    <h1> Welcome! </h1>
+  <% end %>
+
+
+</div>
